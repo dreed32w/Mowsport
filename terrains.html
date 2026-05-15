@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terrains</title>
+    <link rel="stylesheet" href="styles/terrains.css">
+    <link rel="icon" type="image/png" href="images/logo.png">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">
+        <a href="index.php"><img src="images/logo.png" alt="logo"></a>
+    </div>
+
+    <div class="menu-toggle">☰</div>
+
+    <nav>
+        <a href="index.php">Accueil</a>
+        <a href="terrains.html" class="active">Terrains</a>
+        <a href="About.html">À propos</a>
+        <a href="contact.php" >Contact</a>
+    </nav>
+
+    <a href="index.php#toto"><button class="btn" id="superbtn">Ajouter un rendez-vous</button></a>
+</header>
+
+
+<section class="header-terrains">
+
+    <div class="search-container">
+        <input type="search" id="searchInput" placeholder="Recherche">
+        <button id="searchBtn">Rechercher</button>
+    </div>
+
+    <select id="filter">
+        <option value="tout">Tout</option>
+        <option value="Safi">Safi</option>
+        <option value="Casablanca">Casablanca</option>
+        <option value="Errachidia">Errachidia</option>
+        <option value="Rabat">Rabat</option>
+        <option value="Marrakech">Marrakech</option>
+        <option value="Mohammedia">Mohammedia</option>
+        <option value="Agadir">Agadir</option>
+        <option value="Fes">Fes</option>
+    </select>
+
+</section>
+
+
+<section class="terrains-parent">
+
+<!--content de terrainss-->
+
+</section>
+
+
+
+
+<footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-left">
+            <a href="mailto:mowsport@gmail.com"><p>mowsport@gmail.com</p></a>
+            <p>+212679231522</p>
+        </div>
+
+        <div class="footer-center">
+            <a href="condutions.html"><p>conditions</p></a>
+            <a href="About.html"><p>Qui sommes-nous ?</p></a>
+        </div>
+
+      
+        <div class="footer-right">
+            <img src="images/logo-modified.png" class="footer-logo"> 
+            
+            <div class="socials">
+                <a href="https://facebook.com"><img src="images/icons/facebook.png"></a>
+                <a href="https://instagram.com"><img src="images/icons/instagram.png"></a>
+                <a href="https://x.com"><img src="images/icons/twitter.png"></a>
+                <a href="https://youtube.com"><img src="images/icons/youtube.png"></a>
+                <a href="https://tiktok.com"><img src="images/icons/tiktok.png"></a>
+                <a href="https://linkedin.com"><img src="images/icons/linkedin.png"></a>
+            </div>
+        </div>
+
+    </div>
+
+    <p class="copyright">© 2026 MOWSPORT - Tous droits réservés</p>
+</footer>
+
+
+<script>
+document.querySelector(".menu-toggle").onclick = () => {
+    document.querySelector("nav").classList.toggle("active");
+};
+
+let searchBox = document.getElementById("searchInput");
+let searchBtn = document.getElementById("searchBtn");
+let filterSelect = document.getElementById("filter");
+let cards = document.querySelectorAll(".terrains-box");
+
+function searchItems() {
+    let searchval = searchBox.value.toLowerCase();
+    let cityval = filterSelect.value.toLowerCase();
+
+    let cards = document.querySelectorAll(".terrains-box");
+
+    cards.forEach(card => {
+        let title = card.querySelector("h3").textContent.toLowerCase();
+        let city = card.querySelector(".city").textContent.toLowerCase();
+
+        if (
+            (title.includes(searchval) || searchval === "") &&
+            (cityval === "tout" || city === cityval)
+        ) {
+            card.classList.remove("hidden");
+        } else {
+            card.classList.add("hidden");
+        }
+    });
+}
+
+
+
+searchBox.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+        searchItems();
+    }
+});
+
+searchBtn.addEventListener("click", searchItems);
+
+filterSelect.addEventListener("change", searchItems);
+
+get_terrains()
+
+async function get_terrains() {
+    let res = await fetch("get_terrains.php")
+    let repons = await res.json()
+    let content = document.querySelector(".terrains-parent")
+    if (repons.length === 0){
+            content.innerHTML = "Ne pas des terrains";
+            return;
+    }
+    content.innerHTML = "";
+    repons.forEach(e=>{
+        content.innerHTML += `
+            <div class="terrains-box">
+            <img src="${e.image}" alt="terrain">
+        
+
+            <div class="city">${e.city_name}</div>
+
+            <h3>${e.terrain_name}</h3>
+
+            <p>
+                ${e.description}
+            </p>
+
+            <div class="price">${e.price_per_hour}DH</div>
+
+            <a href="terrain_des.php?id=${e.id}"><button>Plus</button></a>
+        </div>`;
+
+    })
+
+    
+}
+</script>
+
+</body>
+</html>

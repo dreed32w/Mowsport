@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A propos</title>
+    <link rel="stylesheet" href="styles/about.css">
+    <link rel="icon" type="image/png" href="images/logo.png">
+</head>
+<body>
+    <header class="navbar">
+    <div class="logo">
+        <a href="index.php"><img src="images/logo.png" alt="logo"></a>
+    </div>
+
+    <div class="menu-toggle">☰</div>
+
+    <nav>
+        <a href="index.php">Accueil</a>
+        <a href="terrains.html">Terrains</a>
+        <a href="About.html" class="active">À propos</a>
+        <a href="contact.php">Contact</a>
+    </nav>
+
+    <a href="index.php#toto"><button class="btn" id="superbtn">Ajouter un rendez-vous</button></a>
+</header>
+    <section class="about">
+
+  <div class="intro">
+    <div class="text">
+      <h2>À propos de Mow Sport</h2>
+      <p>Nous facilitons la réservation des terrains de football partout au Maroc.</p>
+      <a href="terrains.html"><button id="discover" class="btn">Découvrir les terrains</button></a>
+    </div>
+
+    <div class="image">
+      <img src="images/ter1ab.jpg" alt="">
+    </div>
+  </div>
+
+  <div class="content">
+
+    <div class="left">
+
+      <h3>1-Qui sommes-nous ?</h3>
+      <p>À qui s'adresse ce service ?</p>
+      <p>Pourquoi ce site web a-t-il été créé ?</p>
+      <p>
+        Now Sport est une plateforme dédiée à la réservation des terrains de football
+        pour les équipes amateurs, groupes d’amis et joueurs souhaitant s’entraîner
+        ou jouer librement.
+      </p>
+
+      <h3>2-Our Services</h3>
+
+      <p>types des stades</p>
+      <div class="images-small">
+        <div>
+          <p>● des stades intérieures</p>
+          <img src="images/contactimg/stainter.jpg">
+        </div>
+        <div>
+          <p>● des stades ouvertes</p>
+          <img src="images/contactimg/stadeexte.PNG">
+        </div>
+      </div>
+
+      <p>Type de sol</p>
+      <div class="images-small">
+        <div>
+          <p>● Gazon artificiel</p>
+          <img src="images/contactimg/gazart.PNG">
+        </div>
+        <div>
+          <p>● Gazon naturel</p>
+          <img src="images/contactimg/gaznat.jpg">
+        </div>
+      </div>
+
+      <p>pour qui ?</p>
+      <ul>
+        <li>Petites équipes</li>
+        <li>Les amis</li>
+        <li>Matchs amicaux</li>
+      </ul>
+
+      <h3>3-Les villes disponibles</h3>
+      <ul>
+        <li>Safi</li>
+        <li>Errachidia</li>
+        <li>Rabat</li>
+        <li>Casablanca</li>
+        <li>Marrakech</li>
+        <li>Mohammedia</li>
+        <li>Agadir</li>
+        <li>Fes</li>
+      </ul>
+
+      <h3>4-Pourquoi choisir Mow Sport ?</h3>
+      <ul class="advantages">
+        <li>Réservation facile et rapide</li>
+        <li>Diversité des aires de jeux</li>
+        <li>Disponible pour les amis et les équipes</li>
+        <li>Plusieurs options (couvert/ouvert)</li>
+      </ul>
+
+      <p class="cta-text">
+        Réservez votre terrain en quelques clics et jouez quand vous voulez.
+      </p>
+      <a href="index.php#toto"><button class="btn">Réserver maintenant</button></a>
+
+    </div>
+
+    <div class="right">
+      <img src="images/ter2ab.jpg">
+      <img src="images/ter3ab.jpg">
+    </div>
+
+  </div>
+
+</section>
+
+
+<footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-left">
+            <a href="mailto:mowsport@gmail.com"><p>mowsport@gmail.com</p></a>
+            <p>+212679231522</p>
+        </div>
+
+        <div class="footer-center">
+            <a href="condutions.html"><p>conditions</p></a>
+            <a href="About.html"><p>Qui sommes-nous ?</p></a>
+        </div>
+
+      
+        <div class="footer-right">
+            <img src="images/logo-modified.png" class="footer-logo"> 
+            
+            <div class="socials">
+                <a href="https://facebook.com"><img src="images/icons/facebook.png"></a>
+                <a href="https://instagram.com"><img src="images/icons/instagram.png"></a>
+                <a href="https://x.com"><img src="images/icons/twitter.png"></a>
+                <a href="https://youtube.com"><img src="images/icons/youtube.png"></a>
+                <a href="https://tiktok.com"><img src="images/icons/tiktok.png"></a>
+                <a href="https://linkedin.com"><img src="images/icons/linkedin.png"></a>
+            </div>
+        </div>
+
+    </div>
+
+    <p class="copyright">© 2026 MOWSPORT - Tous droits réservés</p>
+</footer>
+
+<script>
+  document.querySelector(".menu-toggle").onclick = () => {
+                document.querySelector("nav").classList.toggle("active");
+        };
+</script>
+
+</body>
+</html>
