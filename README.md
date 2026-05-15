@@ -1,27 +1,19 @@
-# ⚽ MowSport
-
-<p align="center">
-  <img src="https://img.shields.io/badge/PHP-Backend-blue?style=for-the-badge&logo=php" />
-  <img src="https://img.shields.io/badge/MySQL-Database-orange?style=for-the-badge&logo=mysql" />
-  <img src="https://img.shields.io/badge/SCSS-Styling-pink?style=for-the-badge&logo=sass" />
-  <img src="https://img.shields.io/badge/JavaScript-Frontend-yellow?style=for-the-badge&logo=javascript" />
-  <img src="https://img.shields.io/badge/XAMPP-Local%20Server-red?style=for-the-badge&logo=xampp" />
-</p>
+#  MowSport
 
 ---
 
-# 🌍 About MowSport
+# About MowSport
 
 **MowSport** is a modern football field booking platform designed to help players easily reserve small football pitches across multiple cities.
 
 The platform allows users to:
 
-* ⚽ Discover football fields in different cities
-* 📅 Book matches and reserve available time slots
-* 🏟️ Explore pitch information and images
-* 👤 Create and manage user accounts
-* 🔐 Access an admin dashboard for management
-* 📱 Enjoy a responsive and modern user interface
+* Discover football fields in different cities
+* Book matches and reserve available time slots
+* Explore pitch information and images
+* Create and manage user accounts
+* Access an admin dashboard for management
+* Enjoy a responsive and modern user interface
 
 Built with a clean architecture using:
 
@@ -33,7 +25,7 @@ Built with a clean architecture using:
 
 ---
 
-# 🚀 Technologies Used
+# Technologies Used
 
 | Technology | Role                          |
 | ---------- | ----------------------------- |
@@ -46,7 +38,7 @@ Built with a clean architecture using:
 
 ---
 
-# 📂 Project Structure
+# Project Structure
 
 ```bash
 mowsport/
@@ -65,9 +57,9 @@ mowsport/
 
 ---
 
-# ⚙️ Installation Guide
+# Installation Guide
 
-## 1️⃣ Clone the Repository
+##  Clone the Repository
 
 ```bash
 git clone https://github.com/dreed32w/Mowsport.git
@@ -77,7 +69,7 @@ Or download the ZIP file manually.
 
 ---
 
-## 2️⃣ Move Project to XAMPP
+##  Move Project to XAMPP
 
 Copy the project folder into:
 
@@ -93,7 +85,7 @@ C:/xampp/htdocs/mowsport
 
 ---
 
-## 3️⃣ Start XAMPP
+##  Start XAMPP
 
 Open **XAMPP Control Panel** and start:
 
@@ -102,9 +94,9 @@ Open **XAMPP Control Panel** and start:
 
 ---
 
-# 🗄️ Database Setup
+# Database Setup
 
-## 1️⃣ Open phpMyAdmin
+##  Open phpMyAdmin
 
 Visit:
 
@@ -114,7 +106,7 @@ http://localhost/phpmyadmin
 
 ---
 
-## 2️⃣ Create Database
+##  Create Database
 
 Create a new database named:
 
@@ -124,7 +116,7 @@ mowsport
 
 ---
 
-## 3️⃣ Import SQL File
+##  Import SQL File
 
 * Open the newly created database
 * Go to the **SQL** tab
@@ -140,7 +132,7 @@ admin/database.sql
 
 ---
 
-# ▶️ Run the Platform
+# Run the Platform
 
 Open your browser and visit:
 
@@ -150,7 +142,7 @@ http://localhost/mowsport
 
 ---
 
-# ✨ Features
+# Features
 
 * Modern football reservation system
 * Multi-city support
@@ -163,28 +155,28 @@ http://localhost/mowsport
 
 ---
 
-# 📸 Preview
+# Preview
 
 > A modern sports booking experience focused on simplicity, speed, and accessibility.
 
 ---
 
-# 👨‍💻 Developer
+# Developer
 
 Developed with passion using PHP, MySQL, SCSS, and JavaScript.
 
 ---
 
-# ⭐ Support
+# Support
 
 If you like this project:
 
-* Give it a ⭐ on GitHub
+* Give it a  on GitHub
 * Share it with your friends
 * Contribute to improve the platform
 
 ---
 
-# 📜 License
+# License
 
 This project is open-source and available for educational and personal use.
